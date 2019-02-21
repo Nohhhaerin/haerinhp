@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSSLICK Inspiration - Portfolio theme(준비파일)</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <!--구글 웹 폰트-->
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dosis|Felipa|PT+Sans|Staatliches" rel="stylesheet">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+  crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Nanum+Pen+Script|Pacifico" rel="stylesheet">  
+  
+  <!-- 사용자 CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+
+  <!-- 사용자 JavaScript -->
+  <!-- Add jQuery library -->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+  <!-- auto type 플러그인-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- <script src="js/typeit.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/6.0.2/typeit.min.js" type="text/javascript"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
+  
+  <!-- favicon 등록 -->
+  <link href="images/로고3.png" rel="icon">
+  <link href="images/로고3.png" rel="apple-touch-icon">
+</head>
+
+<body>
+  <header class="container-fluid">
+    <div class="main-logo container">
+      <h1 id="logo">
+        <a href="#"><img src="./images/logo3.png" width="160" alt="메인로고"></a>
+      </h1>
+      <nav id="gnb">
+        <ul>
+          <li><a href="#">MAIN</a></li>
+          <li><a href="#portfolio">MY WORK</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+      <!-- 모바일 토글버튼 -->
+      <a href="#" id="btn-toggle">
+          <i class="fas fa-bars fa-2x"></i>
+      </a>
+    </div>
+    <article id="main-visual" class="container">
+      <div class="main-visual-text1">
+        <h1>NOH HAERIN'S </h1>
+        <h1>PORTFOLIO</h1>
+      </div>
+      <div class="line"></div>
+      <div class="main-visual-text2">
+        <h2 data-text="I DO CREATIVE ! . I'M a WEB DESIGNER ," class="type"></h2>
+      </div>
+      <script>
+        $(function () {
+          var h2 = document.querySelector('.type');
+          var text = h2.getAttribute('data-text');
+          var text_array = text.split('.')
+          console.log(text, text_array);
+          var agent = navigator.userAgent.toLowerCase();
+
+          if ((navigator.appName == 'Netscape' && agent.indexOf('trident') != -1) || (agent.indexOf("msie") != -1)) {
+            h2.innerHTML = text[0] + '<br>' + text[1];
+          } else {
+            var el = '.type';
+            typeIt = new TypeIt(el, {
+              loop: true
+            });
+            typeIt
+              .type(text_array[0])
+              .pause(300)
+              .break()
+              .type(text_array[1])
+              .pause(3000)
+              .delete(2)
+              .go();
+          }
+        });
+      </script> 
+  </article>
+  </header>
+  <section id="portfolio" class="container-fluid">
+    <div id="fixed_top"><a href="#top"><img src="images/topbutton.png" width="90" alt=""></a></div>
+    <div class="container">
+    <h2>my work</h2>
+    <ul class="row">
+        <li class="col-md-4 snip1436 mb-3">
+          <a href="#"><img src="images/icon.png" alt="home"></a>
+          <div>
+            <h3>MATERIAL Icon</h3>
+            <p>머터리얼 디자인을 활용한 어플리케이션 아이콘</p>
+            <p>Tool : Photoshop</p>
+            <p><a href="images/icon-1.png" target="_blank" class="read-more">Read More</a></p>
+          </div>
+        </li>
+        <li class="col-md-4 snip1436 mb-3">
+          <a href="#"><img src="images/banner.png" alt="home"></a>
+          <div>
+            <h3>Main banner</h3>
+            <p>11번가 메인 비주얼배너 디자인</p>
+            <p>Tool : Photoshop</p>
+            <p><a href="images/11-1.png" target="_blank" class="read-more">Read More</a></p>
+          </div>
+        </li>
+        <li class="col-md-4 snip1436 mb-3">
+          <a href="#"><img src="images/starbucks2.png" alt="home"></a>
+          <div>
+            <h3>FLAT UI LAYOUT </h3>
+            <p>메인홈페이지 레이아웃 디자인</p>
+            <p>Tool : Photoshop</p>
+            <p><a href="images/main3.png" target="_blank" class="read-more">Read More</a></p>
+          </div>
+        </li>
+      </ul>
+      <ul class="row">
+        <li class="col-md-4 snip1436 mb-3">
+          <a href="#"><img src="images/party.png" alt="home"></a>
+          <div>
+            <h3>Card UI Design</h3>
+            <p>모바일 초대장 제작</p>
+            <p>Tool : Illustrator</p>
+            <p><a href="images/card.png" target="_blank" class="read-more">Read More</a></p>
+          </div>
+        </li>
+        <li class="col-md-4 snip1436 mb-3">
+          <a href="#"><img src="images/명함이다.png" alt="home"></a>
+          <div>
+            <h3>BUSINESS CARD DESIGN</h3>
+            <p> 명함 제작</p>
+            <p>Tool : Photoshop , Illustrator</p>
+            <p><a href="images/card2.png" target="_blank" class="read-more">Read More</a></p>
+          </div>
+        </li>
+        <li class="col-md-4 snip1436 mb-3">
+          <a href="#"><img src="images/weader.png" alt="home"></a>
+          <div>
+            <h3>Wedther UI Design</h3>
+            <p>모바일 날씨 앱 시안</p>
+            <p>Tool : Photoshop , Illustrator</p>
+            <p><a href="images/weader-2.png" target="_blank" class="read-more">Read More</a></p>
+          </div>
+        </li>
+      </ul>
+      <ul class="row">
+        <li class="col-md-4 snip1436 mb-3">
+          <a href="#"><img src="images/ga.png" alt="home"></a>
+          <div>
+            <h3>MOBILE APP Design</h3>
+            <p>카풀앱 부릉 제작</p>
+            <p>Tool : Photoshop , Illustrator</p>
+            <p><a href="images/capool.png" target="_blank" class="read-more">Read More</a></p>
+          </div>
+        </li>
+        <li class="col-md-4 snip1436 mb-3">
+          <a href="#"><img src="images/addesign.png" alt="home"></a>
+          <div>
+            <h3>Poster Design</h3>
+            <p>광고포스터 제작</p>
+            <p>Tool : Photoshop , Illustrator</p>
+            <p><a href="images/concert.png" target="_blank" class="read-more">Read More</a></p>
+          </div>
+        </li>
+        <li class="col-md-4 snip1436 mb-3">
+          <a href="#"><img src="images/도미노.png" alt="home"></a>
+          <div>
+            <h3>Main VISUAL BANNER Design</h3>
+            <p>도미노 비쥬얼 배너 이미지</p>
+            <p>Tool : Photoshop , Illustrator</p>
+            <p><a href="images/domino-1.png" class="read-more">Read More</a></p>
+          </div>
+        </li>
+      </ul>
+      <ul class="project row">
+        <li class="col-md-4 snip1436 mb-3">
+          <a href="#"><img src="images/apple.png" alt="home"></a>
+          <div>
+            <h3>Team Project 01</h3>
+            <p>도미노피자 홈페이지 리뉴얼 제작</p>
+            <p>Tool : Visual studio code , Photoshop </p>
+            <p><a href="http://ks830111.dothome.co.kr/domino/index.html" target="_blank" class="read-more">Read More</a></p>
+          </div>
+        </li>
+        <li class="col-md-4 snip1436  mb-3">
+          <a href="#"><img src="images/imac2.png" alt="home"></a>
+          <div>
+            <h3>Team PROJECT 02</h3>
+            <p>롯데호텔 홈페이지 리뉴얼 제작</p>
+            <p>Tool : Visual studio code , Photoshop </p>
+            <p><a href="http://wownd6656.dothome.co.kr/lottehotel/" target="_blank" class="read-more">Read More</a></p>
+          </div>
+        </li>
+      </ul>
+  
+    </div>
+  </section>
+  <section id="about" class="container">
+    <h2>about</h2>
+    <article class="row"> 
+        <div class="col-md-4 introduce1">
+          <img src="images/myimg.jpg" alt="profile img" class="img-responsive">
+          <p>노혜린 | NOH HAE RIN <br> web designer & web publisher</p>
+        </div>
+        <div class="col-md-4 introduce1">
+            <img src="images/curious.png" alt="profile img" class="img-responsive">
+            <p>더조은아카데미<br>웹 표준 기반 디지털웹디자인 과정
+            </p>
+        </div>
+        <div class="col-md-4 introduce1">
+          <img src="images/myimg2.png" alt="profile img" class="img-responsive">
+          <p>Amor Fati ! <br> 내 운명을 사랑하라</p>
+        </div>
+        <div class="col-md-6 skills1 allskills" >
+          <h3>Personal Skills</h3> 
+          <div class="chart">
+            <div class="chart1" data-percent="80">      
+            </div>
+            <p>Team Work</p>
+          </div>  
+          <div class="chart">
+            <div class="chart2" data-percent="90">
+            </div>
+            <p>Presentation</p>
+          </div>
+          <br>
+          <div class="chart">   
+            <div class="chart3" data-percent="70">
+            </div>
+            <p>Creative</p>
+          </div>
+          <div class="chart">
+            <div class="chart4" data-percent="80">
+            </div>
+            <p>Communication</p>
+          </div>
+        </div>      
+        <div class="col-md-6 skills2 allskills" >
+          <h3>Tool Skills</h3>
+          <img src="./images/skills.png"  width="300" alt="myskills">
+          <!-- <ul class="skill_list">
+            <li class="barlist1">
+              <div class="bar1">
+                <b>Photoshop</b>
+              </div>
+            </li>
+            <li class="barlist2">
+              <div class="bar2">
+                <b>Illustrator</b>
+              </div>
+            </li>
+            <li class="barlist3">
+              <div class="bar3">
+                <b>html5</b>
+              </div>
+            </li>
+            <li class="barlist4">
+
+              <div class="bar4">
+                <b>CSS3</b>
+              </div>
+            </li>
+            <li class="barlist5">
+              <div class="bar5">
+                <b>JavaScript</b>
+              </div>
+            </li>
+          </ul> -->
+        </div>
+        <script>
+          function run_pie(){
+            var pie_data1 = {
+            trackColor: '#999',
+            barColor: '#cd9a9a',
+            lineWidth: 10,
+            lineCap: 'butt'
+            }
+            $('.chart1').easyPieChart(pie_data1);
+            $('.chart2').easyPieChart({
+            trackColor: '#999',
+            barColor: '#cd9a9a',
+            lineWidth: 10,
+            lineCap: 'square'
+            });
+            $('.chart3').easyPieChart({
+            trackColor: '#999',
+            barColor: '#cd9a9a',
+            lineWidth: 10,
+            lineCap: 'butt'
+            });
+
+            $('.chart4').easyPieChart({
+            trackColor: '#999',
+            barColor: '#cd9a9a',
+            lineWidth: 10,
+            lineCap: 'butt'
+            });
+          }
+            
+
+        </script>
+    </article>
+  </section>
+  <section id="contact" class="container-fluid">
+      <div class="container">
+        <h2>contact</h2>
+        <article class="row">
+        <div class="col-md-6 contactbox1">
+            <p>Thank you for visiting my homepage !</p>
+            <ul class="myinfor">
+              <li><b>노혜린의 2019포트폴리오</b></li>
+              <li><b>Web Designer ．Web Publisher</b></li>
+              <li><img src="./images/logo2.png" alt="contact" width="150"></li>
+            </ul>
+            <ul class="myinfo2">
+              <li><i class="fas fa-phone fa-2x"></i><b><a href="tel:010-2527-4374"> 01025274374</a></b></li>
+              <li><i class="fas fa-envelope fa-2x"></i><b><a href="mailto:hae4374@naver.com"> hae4374@naver.com</a></b></li>
+              <li><i class="fas fa-sms fa-2x"></i><b><a href="mailto:hae4374@naver.com"> wjdfls51529@hanmail.net</a></b></li>
+            </ul>
+        </div>
+        <div class="col-md-6 contactbox2">
+            <div class="contactbox2-1">
+              <p class="contact_title fontStyle">CONTACT ME *</p>
+              <p class="contact_text">연락을 원하시면 아래의 양식을 입력 후 확인을 눌러주세요.</p>
+              <div class="contact_input_wrap">
+                <label for="name" class="fontStyle">your name *</label>
+                <input type="text" id="name">
+              </div>
+              <div class="contact_input_wrap">
+                <label for="email" class="fontStyle">email address *</label>
+                <input type="email" id="email">
+              </div>
+              <div class="contact_input_wrap">
+                <label for="message" class="fontStyle">message *</label>
+                <input type="text" id="message">
+              </div>
+                <button class="centerX">확인</button>
+            </div>
+        </div>
+        </article>
+      </div>
+    </section>
+    <footer class="container-fluid">
+      <div class="container">
+        <p>Copyright &copy; 2018 haerin, noh</p>
+      </div>
+      <div class="sns mt-3">
+        <!-- kakao 공유버튼 -->
+        <div id="kakaostory-share-button" data-url="내홈페이지주소" class="mr-2"></div>
+        <span>
+          <!-- 네이버 공유버튼 -->
+          <script type="text/javascript" src="https://ssl.pstatic.net/share/js/naver_sharebutton.js"></script>
+          <script type="text/javascript">
+            new ShareNaver.makeButton({
+              "type": "c"
+            });
+          </script>
+        </span>
+      </div>
+    </footer>
+  
+  <!-- 사용자 java -->
+  <script src="js/main.js"></script>
+  <!-- sns api -->
+  <script src="js/api.js"></script>
+
+</body>
+
+</html>

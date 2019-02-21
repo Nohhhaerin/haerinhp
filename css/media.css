@@ -1,0 +1,213 @@
+/* media.css */
+
+/*  모바일(~태블릿) */
+@media (max-width: 767px){
+    header #gnb{
+        position: relative;
+        display: none;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 999;
+        margin-top: 3.8em;
+        padding: 10px;
+    }
+    header #gnb li{
+        margin-top: 10px;
+    }
+    header .main-logo #gnb li a{
+        color: #fff;
+        
+    }
+    #main-visual .main-visual-text1 h1{
+        font-size: 78px;
+        font-size: 8vw;
+        text-shadow: 2,2,2, rgba(0, 0, 0, 0.2);
+      }
+    #main-visual .line {
+          position: absolute;
+          top: 140px;
+          border-bottom: 3px solid #333;
+      }
+    #main-visual .main-visual-text2{
+        position: relative;
+        top:180px;
+    }
+    #main-visual .main-visual-text2 h2{
+        font-size: 24px;
+        font-size: 6.5vw;
+        text-shadow: 6,6,6, rgba(0, 0, 0, 1);
+      }
+      #btn-toggle{
+          display: block;
+          position: absolute;
+          top: 30px;
+          right: 20px;
+          color: #000;
+    }
+    #portfolio #fixed_top img{
+        width:70px;
+    }
+    #portfolio #fixed_top{
+        right:50px;
+        width:30px;
+        height:30px;
+    }
+    
+    #contact{
+        width:100%;
+        height:1200px;
+    }
+    .contactbox1 {
+        /* border: 1px solid red; */
+        position: absolute;
+        top: 40px;
+    }
+
+    .contactbox2 {
+        position: absolute;
+        /* border: 1px solid red; */
+        top: 50%;
+    }
+    .skills2 .skill_list{
+        padding-left: 4.5em;
+    }
+    .skill_list li {
+        position: relative;
+        /* border:1px solid red; */
+        margin: 20px;
+        width: 200px;
+        background: #bc4f4f;
+    }
+    .barlist1:before {
+        position: absolute;
+        left: -100px;
+        content: 'Photoshop';
+    }
+
+    .barlist2:before {
+        position: absolute;
+        left: -100px;
+        content: 'Illustrator';
+    }
+
+    .barlist3:before {
+        position: absolute;
+        left: -100px;
+        content: 'HTML5';
+    }
+
+    .barlist4:before {
+        position: absolute;
+        left: -100px;
+        content: 'CSS3';
+    }
+
+    .barlist5:before {
+        position: absolute;
+        left: -100px;
+        content: 'JAVASCRIPT';
+    }
+
+    .skill_list b {
+        display: none;
+    }
+
+    .bar1 {
+        width: 0%;
+        height: 20px;
+        background: #cd9a9a;
+    }
+
+    .bar2 {
+        width: 0%;
+        height: 20px;
+        background: #cd9a9a;
+    }
+
+    .bar3 {
+        width: 0%;
+        height: 20px;
+        background: #cd9a9a;
+    }
+
+    .bar4 {
+        width: 0%;
+        height: 20px;
+        background: #cd9a9a;
+    }
+
+    .bar5 {
+        width: 0%;
+        height: 20px;
+        background: #cd9a9a;
+    }
+
+    .bar1.on {
+        width: 80%;
+        height: 20px;
+        background: #cd9a9a;
+    }
+
+    .bar2.on {
+        width: 70%;
+        height: 20px;
+        background: #cd9a9a;
+    }
+
+    .bar3.on {
+        width: 70%;
+        height: 20px;
+        background: #cd9a9a;
+    }
+
+    .bar4.on {
+        width: 50%;
+        height: 20px;
+        background: #cd9a9a;
+    }
+
+    .bar5.on {
+        width: 50%;
+        height: 20px;
+        background: #cd9a9a;
+    }
+
+    .contactbox2-1 {
+        padding: 50px 50px 50px 50px;
+        background: #643f70;
+        position: absolute;
+        left: 5px;
+        top: 400px;
+        color: #fff;
+    }
+    .contactbox2-1 .contact_input_wrap .fontStyle {
+        position: relative;
+        top:10%;
+        right: 28%;
+        text-align: left;
+        width: 120px;
+        /* border:1px solid red; */
+    }
+    .centerX {
+        width: 100%;
+        margin-left: -5px;
+    }
+
+    footer{
+        z-index: 9;
+    }
+
+}
+
+/* 중간 크기 이상~ pc */
+@media (min-width:768px){
+    header #gnb{
+        display: block !important;
+        position: absolute;
+        right: 40px;
+        top: 20px;
+    }
+    header #btn-toggle{
+        display: none;
+    }
+   
+}
